@@ -19,19 +19,17 @@ y accediendo al navegador
 
     http://localhost:5000/list
 
-con docker compose
+Con docker compose
 
-´´´
-version: '3.1'
+    version: '3.1'
 
-services:
-  apidocker:
-    image: manologcode/apidocker
-    restart: always
-    container_name: apidocker
-    ports:
-      - "8888:5000"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+    services:
+    apidocker:
+        image: manologcode/apidocker
+        restart: always
+        container_name: apidocker
+        ports:
+        - "8888:5000"
+        volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
 
-´´´
