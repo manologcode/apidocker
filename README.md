@@ -3,7 +3,7 @@
 Se trata de una simple api que permite arrancar y parar contenedores mediante llamadas GET sobre la api.
 He creado esta aplicación para que permita manejar los contenedores de mis servidores locales y raspberry a partir de las startPages me mediante peticiones get con javascript.
 
-Esta es un ejemplo de una pagina para consumir esta api :
+Este es un ejemplo de pagina para consumir esta api : https://github.com/manologcode/startpage_dockers
 
 tiene dos puntos de acceso:
 
