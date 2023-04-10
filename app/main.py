@@ -51,11 +51,11 @@ def get_container(docker_name):
 def list_dockers():
     response = []
     for container in client.containers.list(all=True):
-        if container.ports == {}:
-           port=""
-        else:
-          first_port=next(iter(container.ports.values()))[0]
-          port = first_port['HostPort']
+        port=""
+        if container.ports != {}:
+          ports_element = next(iter(container.ports.values()))
+          if ports_element is not None:
+            port = ports_element[0]['HostPort']
         data = {
             'name': container.name,
             'port_app': f':{port}/',
