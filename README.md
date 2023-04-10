@@ -11,6 +11,8 @@ tiene dos puntos de acceso:
 
  - **toggle/<container_name>** cambia de estado, arranca o parar el servicio docker que coincide con el nombre
 
+Nota: para que detecte los contenedores tiene que tener la etiqueta container_name
+
 Para correr este servicio
 
     docker run -p 5000:5000 manologcode/apidocker
@@ -32,4 +34,3 @@ Con docker compose
         - "8888:5000"
         volumes:
         - /var/run/docker.sock:/var/run/docker.sock
-
